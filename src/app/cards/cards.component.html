@@ -1,1 +1,18 @@
-<p>cards works!</p>
+<div>
+  <mat-card>
+    <mat-progress-bar #pg
+      mode="determinate"
+      class="bar"
+      value="{{progressBarValue}}"
+
+      color="primary"
+      bufferValue="{{maxProgressBarValue}}"
+    ></mat-progress-bar>
+  </mat-card>
+  <input type="text" value="10" [value]="progressBarValue" (input)="progressBarValue = $event.target.value">
+<!--  <button (click)="makeMeBeTomato($event)">TOMATO!!!</button>-->
+  <mat-card class="product" *ngFor="let card of cards" >
+    <mat-card-title [ngClass]="{'card-title': true, 'myclass': isProgressBarHidden}" >{{card.title}}</mat-card-title>
+    <mat-card-content  [ngClass]="{'card-content': true}">{{card.content}}</mat-card-content>
+  </mat-card>
+</div>

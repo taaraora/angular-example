@@ -1,5 +1,7 @@
-<app-header></app-header>
-<app-cards></app-cards>
+<app-header [drawer]="weGotDrawerFromSideNaw"></app-header>
+<app-side-nav (matDrawerEventEmitter)="weGotDrawerFromSideNaw = $event">
+  <app-cards></app-cards>
+</app-side-nav>
 <app-footer></app-footer>
 
 

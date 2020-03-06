@@ -1,0 +1,17 @@
+.bar {
+  margin: 30px;
+
+}
+
+.product {
+  padding: 10px;
+  margin: 10px;
+}
+
+.card-title {
+  background-color: bisque;
+}
+
+.card-content {
+  background-color: lightpink;
+}
